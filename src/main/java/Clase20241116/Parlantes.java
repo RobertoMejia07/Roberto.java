@@ -8,11 +8,12 @@ package Clase20241116;
  *
  * @author rober
  */
-public class Parlantes {
+public class Parlantes extends Producto {
     private String Sonido;
     private String Rendimiento;
 
-    public Parlantes(String Sonido, String Rendimiento) {
+    public Parlantes(String Sonido, String Rendimiento, String Color, String Marca, String Modelo) {
+        super(Color, Marca, Modelo);
         this.Sonido = Sonido;
         this.Rendimiento = Rendimiento;
     }
@@ -32,5 +33,7 @@ public class Parlantes {
     public void setRendimiento(String Rendimiento) {
         this.Rendimiento = Rendimiento;
     }
+
     
 }
+ 

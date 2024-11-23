@@ -14,6 +14,7 @@ public class Queco extends Animal {
         super(Pelo, Boca, Cola, Ojo, Patas);
     }
     
+    @Override
     public void Sonido(){
         System.out.println("El Queco hace tac tac");
     }

@@ -62,6 +62,10 @@ public class Animal {
     public void setPatas(Integer Patas) {
         this.Patas = Patas;
     }
+
+    void Sonido() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
     

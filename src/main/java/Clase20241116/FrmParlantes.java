@@ -11,16 +11,13 @@ import java.util.List;
  *
  * @author rober
  */
-public class frmTelevisor extends javax.swing.JFrame {
+public class FrmParlantes extends javax.swing.JFrame {
 
-    
-    List <Televisor> lista = new ArrayList<>();
-    
-    
+    List <Parlantes> lista = new ArrayList<>();
     /**
-     * Creates new form frmTelevisor
+     * Creates new form FrmParlantes
      */
-    public frmTelevisor() {
+    public FrmParlantes() {
         initComponents();
     }
 
@@ -38,8 +35,8 @@ public class frmTelevisor extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtPantalla = new javax.swing.JTextField();
         txtSonido = new javax.swing.JTextField();
+        txtRendimiento = new javax.swing.JTextField();
         txtColor = new javax.swing.JTextField();
         txtMarca = new javax.swing.JTextField();
         txtModelo = new javax.swing.JTextField();
@@ -49,9 +46,9 @@ public class frmTelevisor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Pantalla");
+        jLabel1.setText("Sonido");
 
-        jLabel2.setText("Sonido");
+        jLabel2.setText("Rendimiento");
 
         jLabel3.setText("Color");
 
@@ -59,9 +56,21 @@ public class frmTelevisor extends javax.swing.JFrame {
 
         jLabel5.setText("Modelo");
 
-        txtPantalla.addActionListener(new java.awt.event.ActionListener() {
+        txtRendimiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPantallaActionPerformed(evt);
+                txtRendimientoActionPerformed(evt);
+            }
+        });
+
+        txtColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtColorActionPerformed(evt);
+            }
+        });
+
+        txtMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMarcaActionPerformed(evt);
             }
         });
 
@@ -86,45 +95,45 @@ public class frmTelevisor extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
-                .addGap(38, 38, 38)
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(txtPantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSonido, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(btnAceptar))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(txtColor)
-                                .addComponent(txtSonido))
+                                .addComponent(txtRendimiento))
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(btnCancelar, javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(btnMostrar, javax.swing.GroupLayout.Alignment.TRAILING))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtModelo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                        .addComponent(txtModelo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                         .addComponent(txtMarca, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtPantalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSonido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAceptar))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtSonido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRendimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCancelar))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,45 +146,51 @@ public class frmTelevisor extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtPantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPantallaActionPerformed
+    private void txtRendimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRendimientoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPantallaActionPerformed
+    }//GEN-LAST:event_txtRendimientoActionPerformed
+
+    private void txtColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtColorActionPerformed
+
+    private void txtMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMarcaActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-    
         
-    lista.add(new Televisor(
-            
-     txtPantalla.getText(),
-     txtSonido.getText(),
-     txtColor.getText(),
-     txtMarca.getText(),
-     txtModelo.getText()
-            
-    )); 
-            
+    lista.add(new Parlantes(
+    
+    txtSonido.getText(),
+    txtRendimiento.getText(),
+    txtColor.getText(),
+    txtMarca.getText(),
+    txtModelo.getText()
+    
+    ));
+                
     // TODO add your handling code here:
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-    
-    for(Televisor item : lista){
-        System.out.println("Pantalla: " + item.getPantalla());
-        System.out.println("Sonido: " + item.getSonido());
-        System.out.println("Color: " + item.getColor());
-        System.out.println("Marca: " + item.getMarca());
-        System.out.println("Modelo: " + item.getModelo());
-    }    
         
+    for(Parlantes item : lista){
+        System.out.println("Sonido: " + item.getSonido());
+        System.out.println("Rendimiento" + item.getRendimiento());
+        System.out.println("Color" + item.getColor());
+        System.out.println("Marca" + item.getMarca());
+        System.out.println("Modelo" + item.getModelo());
+    }
     // TODO add your handling code here:
     }//GEN-LAST:event_btnMostrarActionPerformed
 
@@ -196,20 +211,20 @@ public class frmTelevisor extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlantes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlantes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlantes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlantes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmTelevisor().setVisible(true);
+                new FrmParlantes().setVisible(true);
             }
         });
     }
@@ -226,7 +241,7 @@ public class frmTelevisor extends javax.swing.JFrame {
     private javax.swing.JTextField txtColor;
     private javax.swing.JTextField txtMarca;
     private javax.swing.JTextField txtModelo;
-    private javax.swing.JTextField txtPantalla;
+    private javax.swing.JTextField txtRendimiento;
     private javax.swing.JTextField txtSonido;
     // End of variables declaration//GEN-END:variables
 }

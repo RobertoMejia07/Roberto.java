@@ -14,6 +14,7 @@ public class Perro extends Animal {
         super(Pelo, Boca, Cola, Ojo, Patas);
     }
     
+    @Override
     public void Sonido(){
         System.out.println("El Perro Ladra");
     }
